@@ -19,7 +19,7 @@ from django.urls import path, include
 
 from root.views import home_view
 
-urlpatterns = [=
+urlpatterns = [
 
     path('admin/', admin.site.urls), 
     path("accounts/",include("accounts.urls")),
