@@ -10,7 +10,7 @@ from rest_framework import status
 @api_view()
 def post_api_view(request):
     post = Post.objects.filter(status=True)
-    post_serilize = postSerializer(Post, many=True)
+    post_serilize = postSerializer(post, many=True)
     return Response(post_serilize.data)
 
 

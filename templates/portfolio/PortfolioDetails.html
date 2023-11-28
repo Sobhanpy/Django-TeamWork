@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'title' %}Goods detail{% endblock 'title' %}
+{% block 'content' %}
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li>Portfolio Details</li>
+        </ol>
+        <h2>Portfolio Details</h2>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+             
+                <div class="swiper-slide">
+                  <img src="{{post.image1.url}}" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="{{post.image2.url}}" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="{{post.image3.url}}" alt="">
+                </div>
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>{{post.title}}</h3>
+              <ul>
+                {% for cat in portfolio.category %}
+                <li><strong>Category</strong>: {{cat.name}}</li>
+                {% endfor %}
+                <li><strong>Client</strong>: {{post.clients}}</li>
+                <li><strong>Project date</strong>: {{post.created_date}} </li>
+                <li><strong>Project URL</strong>: <a href="{{post.client_url}}">{{post.client_url}}</a></li>
+              </ul>
+            </div>
+            <div class="portfolio-description">
+              <p>
+                {{post.content}}
+              </p>
+            </div>
+          </div>
+
+         
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+
+  {% endblock 'content' %}
