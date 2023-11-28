@@ -6,7 +6,7 @@ class PortfolioSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Portfolio
-        fields = ["id", "title", "price", "category", "image1", "image2", "image3"]
+        fields = ["id", "title", "price", "category", "image1", "image2", "image3", "status"]
 
 
 

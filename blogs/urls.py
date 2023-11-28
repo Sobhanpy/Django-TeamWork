@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include
 from .views import *
 
 
@@ -15,4 +15,5 @@ urlpatterns = [
     path('replay/<int:cid>', replay , name='replay'),
     path('delete/<int:cid>', delete , name='delete'),
     path('edit/<int:cid>', edit , name='edit'),
+    path("api/V1/",include('blogs.api.V1.urls')),
 ]
