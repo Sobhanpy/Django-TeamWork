@@ -1,5 +1,5 @@
 from django.db import models
-
+from accounts.models import CustomeUser
 # Create your models here.
 
 class Services (models.Model):
