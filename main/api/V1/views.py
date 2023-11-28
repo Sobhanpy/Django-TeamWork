@@ -1,6 +1,6 @@
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
-from .serializer import PortfolioSerializer, PortfolioDetailSerializer
+from .serialize import PortfolioSerializer, PortfolioDetailSerializer
 from ...models import Portfolio
 from django.shortcuts import get_object_or_404
 from rest_framework import status
