@@ -1,5 +1,5 @@
 from django.db import models
-
+from accounts.models import CustomeUser
 # Create your models here.
 
 class Services (models.Model):
@@ -32,7 +32,6 @@ class ContactUs (models.Model):
 
 class Team(models.Model):
     firstname = models.ForeignKey(CustomeUser, on_delete=models.CASCADE)
-    job = models.ManyToManyField()
     description = models.TextField()
     image = models.ImageField(upload_to='trainer', default='teacher.png')
     twitter = models.CharField(max_length=255, default='#')

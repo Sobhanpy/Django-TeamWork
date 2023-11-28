@@ -1,6 +1,6 @@
 
 from django.db import models
-from accounts.models import CustumUser
+from accounts.models import CustomeUser
 
 
 
@@ -25,7 +25,7 @@ class Tags(models.Model):
 
 class Post(models.Model):
     image =models.ImageField(upload_to='blog', default='default.jpg')
-    author = models.ForeignKey(CustumUser, on_delete=models.CASCADE)
+    author = models.ForeignKey(CustomeUser, on_delete=models.CASCADE)
     category = models.ManyToManyField(Category)
     tag = models.ManyToManyField(Tags)
     #comments
