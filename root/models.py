@@ -40,3 +40,10 @@ class Team(models.Model):
     linkdin = models.CharField(max_length=255, default='#')
     status = models.BooleanField(default=False)
    
+
+class Price(models.Model):
+    title = models.CharField(max_length=255)
+    price = models.IntegerField()
+    properties = models.CharField(max_length = 80)
+    def __str__(self):
+        return self.title

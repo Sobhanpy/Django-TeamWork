@@ -3,7 +3,7 @@ certifi==2023.7.22
 charset-normalizer==3.3.2
 Django==4.0
 django-appconf==1.0.5
-django-filter==22.3
+django-filter==23.3
 django-robots==6.1
 djangorestframework==3.14.0
 idna==3.4
