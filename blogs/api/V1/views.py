@@ -20,7 +20,7 @@ def post_api_view(request):
 def post_api_detail_view(request, pk):
     post = get_object_or_404(Post, id=pk)
     if request.method == "GET":
-        post_serilize = postDetailSerializer(Post)
+        post_serilize = postDetailSerializer(post)
         return Response(post_serilize.data)
     elif request.method == "POST":
         post_serilize = postDetailSerializer(data=request.data)
