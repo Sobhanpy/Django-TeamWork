@@ -2,7 +2,7 @@ from rest_framework import serializers
 from ...models import *
 
 
-class PostSerializer(serializers.ModelSerializer):
+class postSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Post
@@ -11,7 +11,7 @@ class PostSerializer(serializers.ModelSerializer):
 
 
 
-class PostDetailSerializer(serializers.ModelSerializer):
+class postDetailSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Post

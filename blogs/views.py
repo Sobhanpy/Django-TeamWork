@@ -46,7 +46,7 @@ def blog_home(req, tag=None, username=None, cat=None):
         'last_four_posts' : last_four_posts,
         'tags' : tags,
     }
-    return render(req, 'blog/blog-home.html', context=context)
+    return render(req, 'blogs/blog.html', context=context)
 
 
 def blog_single(req, pid):
