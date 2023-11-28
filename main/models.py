@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from accounts.models import CustomeUser
 
+
 class Category(models.Model):
     name = models.CharField(max_length=100)
     def __str__(self) -> str:
@@ -15,7 +16,7 @@ class Portfolio(models.Model):
     image1 = models.ImageField(upload_to= 'blog')
     image2 = models.ImageField(upload_to= 'blog')
     image3 = models.ImageField(upload_to= 'blog')
-    published_date = models.DateField()
+    published_date = models.DateField(auto_now_add=True)
     category = models.ManyToManyField(Category)
     counted_views = models.IntegerField(default=0)
     created_date = models.DateTimeField(auto_now_add=True)
