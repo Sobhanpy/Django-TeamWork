@@ -18,7 +18,7 @@ def post_api_view(request):
 
 @api_view(["GET", "POST", "PUT", "DELETE"])
 def post_api_detail_view(request, pk):
-    post = get_object_or_404(Post, id=pk)
+    post = get_object_or_404(Post, id= str(pk))
     if request.method == "GET":
         post_serilize = postDetailSerializer(post)
         return Response(post_serilize.data)
